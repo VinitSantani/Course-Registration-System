@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<body style="background-color:SeaShell;">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js" integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ=" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+	<title>NJIT Registration System</title>
+	<link rel="stylesheet" type="text/css" href="style.css"> -->	
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("input[type='radio']").change(function() {
+                if ($(this).val() == "other") {
+                    $("#otherAnswer").show();
+                } else {
+                    $("#otherAnswer").hide();
+                }
+            });
+        });
+    </script>
+
+<title> NJIT Registration System </title>
+	<style>
+      marquee{
+      font-size: 30px;
+      font-weight: 800;
+      font-style:italic;
+      font-family: sans-serif;
+      }
+  	</style>
+
+  </head>
+<body>
+	<marquee direction="right" behavior="alternate" style="background:white; border:red 3px SOLID" >
+	Welcome to course registration site of NJIT !!
+	</marquee>
+
+
+  <div class="container p-3 my-3 bg-dark text-white ">
+
+  	<style>
+h1 {text-align: center;}
+</style>
+<body>
+
+<h1>About Graduate Courses offered at NJIT</h1>
+<p>Graduate programs are available to full-time students, or working professionals who are interested in part-time study. Many programs are also offered online.</p>
+
+<p>More than 3,000 students from across the country and around the world are engaged in graduate study each year at NJIT. NJIT currently offers about 50 master's degree programs, 19 doctoral degree programs, and dozens of graduate certificate programs in a wide range of technological specialties through the following colleges and schools:</p>
+ 
+ <div class="container text-center">
+<ul class="d-inline-block text-left">
+<li>Newark College of Engineering</li>
+<li>College of Architecture and Design</li>
+<li>College of Science and Liberal Arts</li>
+<li>Martin Tuchman School of Management</li>
+<li>Ying Wu College of Computing</li>
+</ul>
+
+ </div>
+
+
+<!--<p>NJIT also offers the following program options:</p>
+
+<ol>
+<li>Accelerated programs where some courses double count toward two degrees - 1. BS-MS & BS-PhD program options 2. MS-MS & MS-MBA program options</li>
+<li>Collaborative doctorate program (for working professionals)</li>
+</ol>
+
+<p>Professional options are also available in some master's degree programs. Some of these options are affiliated with the PSM (Professional Science Master's) National Office.</p>-->
+
+</body>
+</div>
+
+
+<body>
+<style>
+p {text-align: center;}
+</style>
+<div class="container" align="center">
+	<p><b> Step 1 : Search for courses by selecting the correct Semester. </b></p>
+	<div class="card" style="width: 18rem;">
+  <div class="card-header">
+	<label>Course Search </label>
+	<input type="radio" id="courseSearch" value="courseSearch"/>
+	</div>
+	<div class=" container form-group pt-3" style="display:none;" id="search">
+		<div class="form-group">
+		<label>Select Semester</label>
+		<select name="semester"  id="semesterSelect">
+			<option value="Select">Select</option>
+			<option value="Fall2021">Fall2021</option>
+			<option value="Spring2022">Spring2022</option>
+        </select>
+        <button class="btn btn-success" id="submitSemester" type="submit" value="Submit"> Submit </button>
+	</div>
+	</div>
+</div>
+<br>
+
+<p><b> Step 2 : Register for courses of your choice. </b></p>
+<div class="card" style="width: 18rem;">
+	<div class="card-header">
+	<label>Course Registration </label>
+	<input type="radio" id="courseRegister" value="courseRegister"/>
+	</div>
+
+	<div class="container form-group pt-3" style="display:none;" id="register">
+		<div class="form-group">
+			<input type="text" class="form-control form-group" id="courseId" placeholder="CourseID">
+			<div class="text-danger" id="courseIdError" style="display:none">
+				Please enter CourseID
+			</div>		
+		</div>
+		<div class="form-group">
+		<input type="text" class="form-control form-group" id="semester" placeholder="Semester">
+			<div class="text-danger" id="semesterError" style="display:none">
+				Please enter Semester
+			</div>
+		</div>	
+		<button class="btn btn-danger" id="submitRegister" type="button">Register</button>
+	</div>
+	<script>
+		$(document).ready(function(){
+   			 $('#courseSearch').click(function(){
+   			 	$('#search').show();
+    		});
+
+   			 $('#courseRegister').click(function(){
+   			 	$('#register').show();
+   			 });
+
+   			 $('#submitSemester').click(function(){
+   			 	var semester = $('#semesteterSelect').val();
+   			 	//Write a servlet program here;
+   			 	//And also handle exception here
+   			 	alert('You have submitted the semester');
+   			 });
+
+   			 $('#submitRegister').click(function(){
+   			 	var courseId = $('#courseId').val();
+   			 	var semester = $('#semester').val();
+
+
+
+   			 	alert('You have submitted the course details')
+   			 	//Write a servlet program here;
+   			 	//And also handle exception here
+   			 });
+
+		});
+
+	</script>
+  </div>
+</div>
+</div>
+
+	<!--<div class="form-group">
+	<label>Course Registeration </label>
+	<input type="radio" id="courseRegister" value="courseRegister"/>
+	</div>
+
+	<div class="form-group w-50" style="display:none;" id="register">
+		<input type="text" class="form-control" id="courseId" placeholder="CourseID">
+		<input type="text" class="form-control" id="semester" placeholder="Semester">
+		<button class="btn btn-danger" id="submitRegister" type="button">Register</button>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+   			 $('#courseSearch').click(function(){
+   			 	$('#search').show();
+    		});
+
+   			 $('#courseRegister').click(function(){
+   			 	$('#register').show();
+   			 });
+
+   			 $('#submitSemester').click(function(){
+   			 	var semester = $('#semesteterSelect').val();
+   			 	console.log(semester);
+   			 	//Write a servlet program here;
+   			 	//And also handle exception here
+   			 	alert('You have submitted the semester');
+   			 });
+
+   			 $('#submitRegister').click(function(){
+   			 	var courseId = $('#courseId').val();
+   			 	var semester = $('#semester').val();
+   			 	console.log(courseId, semester);
+   			 	alert('You have submitted the course details')
+   			 	//Write a servlet program here;
+   			 	//And also handle exception here
+   			 });
+		});
+
+	</script>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  Course Search <input type="radio" name="answer" value="other" /><br>
+    <input style="display:none;" type="label for select semester" name="otherAnswer" id="otherAnswer" />
+   <script>
+        function display()
+        {
+            if (document.form.semester.selectedIndex == "")
+            {
+                alert("Please select semester!");
+            }
+            var sel = document.getElementById("semester");
+             //get the selected option
+			 //var selectedText = sel.options[sel.selectedIndex].text;
+			   //var selectedText = sel.options[sel.selectedIndex].value;
+				//alert("You have selected : " + selectedText);	
+            
+        }
+    </script> -->
+	<!-- See this in console log for return , without return  -->
+<!--     <form name="form" method="post" onSubmit="display()"> 
+            <pre>
+            Select Semester: 
+			<select name="semester" id="semester">
+					<option value="Select">Select</option>
+					<option value="Fall2021">Fall2021</option>
+					<option value="Spring2022">Spring2022</option>
+			
+            </select>
+            <input type="submit" name="Submit" value="Submit">
+            </pre>
+    </form>
+
+  					<input type="radio" id="register" name="course" value="register">
+  					<label for="register">COURSE REGISTRATION</label>
+  					<form method="post">  
+    COURSE ID  
+            <input type="text" name="courseid"/>  
+    SEMESTER  
+            <input type="text" name="semester"/>  
+        </form>  
+          							    <button type="submit" class="registerbtn">Register</button> -->
+<div class="container p-3 my-3 bg-dark text-white ">
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        For more information, please visit <a href="https://myhub.njit.edu/StudentRegistrationSsb/ssb/registration">NJIT's official course registration webpage.</a>
+      </p>
+    </section>
+    <!-- Section: Text -->
+</footer>
+<!-- Footer -->
+</div>
+  </body>
+
+<!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<div class="main">
+		
+<meta charset="utf-8">
+		<div class="overlay">
+			
+		</div>
+		<div class="heading">
+
+				
+				<div class="dropdown">
+
+					<input type="radio" id="search" name="course" value="search" style="border-style:none;font-size:20px">
+  					<label for="search">COURSE SEARCH</label>
+
+  							<select>
+    							<option selected= "Semester"> Select Semester </option>
+    							<option> Fall2021 </option>
+    							<option> Spring2022 </option>    
+  							</select> <br>
+  							<input type="submit" value="Submit">
+
+  					<input type="radio" id="register" name="course" value="register">
+  					<label for="register">COURSE REGISTRATION</label>
+							<!<select>
+							    <option> option </option>
+							    <option> option </option>
+							    <option> option </option>    
+  							</select> -->
+
+    
+				</div>	
+		</div>
+	</div>	
+</body>
+</html>
